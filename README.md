@@ -197,6 +197,13 @@ This Python script simulates an IoT device sending telemetry data to an Azure Io
 4. Each message is printed to the console for tracking, and the script stops gracefully when interrupted (e.g., with Ctrl+C).
 5. The `if __name__ == "__main__":` block ensures the script runs when executed directly.
 
+
+## Running Program:
+
+![5](https://github.com/user-attachments/assets/8e4e1873-17fe-4883-b070-ffcdebb20a67)
+
+
+
 ## Install Required Library:
 Open the terminal and install the necessary library to simulate sensor data by running:
 
