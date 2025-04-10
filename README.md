@@ -317,8 +317,11 @@ The processed data is saved in the `output.json` file.
 
 You can access the stored files by navigating to the `iotoutput` container in our Azure Blob Storage account.
 
-# Reflection:
-- Discuss any challenges faced during implementation and how they were addressed.
+# Challenges:
+- while importing "azure.iot.device" my system was giving an fetal error not able to inport the function.
+
+##
+- reinstalled python with the updated verion and run the command "pip install azure-iot-device" and worked for me.
 
 ### Experience
 
