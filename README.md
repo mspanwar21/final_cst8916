@@ -22,7 +22,8 @@ To ensure citizen safety, the City of Ottawa has implemented a real-time data-ga
 
 Data flow Diagram:
 
-![External Image](screenshot/Data-flow-diagram.png)
+![Screenshot 2025-04-10 122425](https://github.com/user-attachments/assets/34555c6c-562c-485c-ae90-fec702160595)
+
 
 ## Implementation Details
 
@@ -227,23 +228,26 @@ Press `Ctrl + C` to stop the simulation. The script will handle this and disconn
 ## Resource Group
 1. Create Resource group
 
-![External Image](screenshot/1.png)
+![1](https://github.com/user-attachments/assets/0f3c92cb-e364-4596-9569-f0bfdc6cff97)
+
 
 ## Create an IoT Hub
 1. In the Azure Portal, search for **IoT Hub** and click **Create**.
 2. Provide a name for the IoT Hub and select a resource group.
 3. Choose the **Free Tier** (if available) for testing purposes and create the IoT Hub.
 
-![External Image](screenshot/2.png)
+![1 1](https://github.com/user-attachments/assets/b40ee493-5d3b-4c78-bf65-049deea50e2a)
+
 
 ## Stroage account
 
 1. Create Stroage account and create container
 
 
-![External Image](screenshot/5.png)
 
-![External Image](screenshot/3.png)
+![1 2](https://github.com/user-attachments/assets/6d0f9d41-ab63-4a40-bd2e-40d3aacbede0)
+
+
 
 
 ## Stream Analytics Job
@@ -251,7 +255,8 @@ Press `Ctrl + C` to stop the simulation. The script will handle this and disconn
 2. Provide a name for the job and select the appropriate resource group.
 3. Choose **Cloud** as the hosting environment and create the job.
 
-![External Image](screenshot/4.png)
+![1 3](https://github.com/user-attachments/assets/7048041a-03f2-446c-a3d7-fb0315a7aa21)
+
 
 
 ## Configure Input for Stream Analytics Job
@@ -263,9 +268,9 @@ Press `Ctrl + C` to stop the simulation. The script will handle this and disconn
    - **Consumer Group**: Use **$Default** or create a new consumer group in our IoT Hub.
    - **Serialization Format**: Choose **JSON**.
 
-![External Image](screenshot/6.png)
+![2](https://github.com/user-attachments/assets/a0e4b436-8d5d-4801-b53a-f729ae1082c5)
 
-![External Image](screenshot/7.png)
+
 
 ## Write the Stream Analytics Query
 1. Go to the Query tab and replace the default query with the following:
@@ -284,7 +289,6 @@ Press `Ctrl + C` to stop the simulation. The script will handle this and disconn
          IoTHub.ConnectionDeviceId, TumblingWindow(minute, 5)
  ```
 
-![External Image](screenshot/8.png)
 
 **Explanation:** This query processes real-time data in Azure Stream Analytics. It calculates the average temperature and humidity from incoming data, grouped by the devices location, over 60-second intervals using a tumbling window. The results include the device ID, the average values, and the event timestamp. The processed data is then saved to a specified output location.
 
@@ -292,11 +296,9 @@ Press `Ctrl + C` to stop the simulation. The script will handle this and disconn
 Choose a file (e.g., a .json file) to view its contents directly in the Azure Portal.
 Alternatively, download the file to your local machine for in-depth analysis using tools like a text editor, JSON viewer, or data processing software.
 
-![External Image](screenshot/9.png)
+![4](https://github.com/user-attachments/assets/26981924-b254-4ccb-9be1-10348b7eef5c)
+![4 1](https://github.com/user-attachments/assets/10acbb07-4f40-4a84-a292-6e0365b1fa9f)
 
-![External Image](screenshot/10.png)
-
-![External Image](screenshot/11.png)
 
 # Results
 
